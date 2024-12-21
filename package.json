@@ -2,8 +2,9 @@
   "name": "shadesai",
   "displayName": "Shades Of Stoicism",
   "description": "Professional developer theme with AI-enhanced syntax highlighting, semantic coding colors, and eye comfort optimization. Perfect for long coding sessions and modern development.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "ddh4r4m",
+  "icon": "src/marcus.png",
   "engines": {
     "vscode": "^1.96.0"
   },
