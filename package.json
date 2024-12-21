@@ -2,7 +2,7 @@
   "name": "shadesai",
   "displayName": "Shades Of Stoicism",
   "description": "Professional developer theme with AI-enhanced syntax highlighting, semantic coding colors, and eye comfort optimization. Perfect for long coding sessions and modern development.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "ddh4r4m",
   "icon": "src/marcus.png",
   "engines": {
@@ -31,7 +31,20 @@
     "popular",
     "best",
     "trending",
-    "2024"
+    "2024",
+    "2025",
+    "shades",
+    "shades of",
+    "shades of Stoicism",
+    "stoic",
+    "stoicism",
+    "Shades of purple",
+    "one",
+    "dracula",
+    "github",
+    "material",
+    "atom",
+    "one dark"
   ],
   "categories": [
     "Themes",
