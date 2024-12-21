@@ -103,6 +103,12 @@
     "terminal.ansiYellow": "#ECC94B",
     "terminal.selectionBackground": "#4A556880",
 
+    "titleBar.activeBackground": "#202234", // Background when window is active
+    "titleBar.activeForeground": "#acdcff", // Text color when window is active
+    "titleBar.inactiveBackground": "#252632", // Background when window is inactive
+    "titleBar.inactiveForeground": "#546E7A", // Text color when window is inactive
+    "titleBar.border": "#3cbaec40", // Optional border color
+
     // Sidebar - Creating visual hierarchy
     "sideBar.background": "#2c2e44", // 1
     "sideBar.foreground": "#E2E8F0",
