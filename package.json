@@ -3,8 +3,14 @@
   "displayName": "Shades",
   "description": "Professional developer theme with AI-enhanced syntax highlighting, semantic coding colors, and eye comfort optimization. Perfect for long coding sessions and modern development.",
   "version": "1.0.0",
+  "publisher": "ddh4r4m",
   "engines": {
     "vscode": "^1.96.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddh4r4m/Shades"
+
   },
   "keywords": [
     "theme",
