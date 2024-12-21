@@ -4,8 +4,10 @@ Transform your coding experience with a thoughtfully crafted theme that combines
 
 
 ## Theme Overview
+### Go
 ![Main Theme Preview](src/goLang.png)
-*Full editor view showing Go code with our intelligent syntax highlighting*
+
+### JS
 ![Main Theme Preview](src/Js.png)
 
 ## Why Choose This Theme? 🌟
