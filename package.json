@@ -1,0 +1,43 @@
+{
+  "name": "shades",
+  "displayName": "Shades",
+  "description": "Professional developer theme with AI-enhanced syntax highlighting, semantic coding colors, and eye comfort optimization. Perfect for long coding sessions and modern development.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "keywords": [
+    "theme",
+    "color theme",
+    "dark theme",
+    "light theme",
+    "developer",
+    "professional",
+    "programming",
+    "code",
+    "syntax highlighting",
+    "semantic",
+    "eye comfort",
+    "AI",
+    "modern",
+    "productivity",
+    "focus",
+    "popular",
+    "best",
+    "trending",
+    "2024"
+  ],
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Shades",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-color-theme.json"
+      }
+    ]
+  }
+}
