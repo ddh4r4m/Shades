@@ -2,6 +2,12 @@
 
 Transform your coding experience with a thoughtfully crafted theme that combines aesthetic beauty with functional design. This isn't just another color scheme – it's a complete visual enhancement designed to make your code more readable, your debugging more intuitive, and your development workflow more enjoyable.
 
+
+## Theme Overview
+![Main Theme Preview](src/goLang.png)
+*Full editor view showing Go code with our intelligent syntax highlighting*
+![Main Theme Preview](src/Js.png)
+
 ## Why Choose This Theme? 🌟
 
 Our theme has been meticulously designed with both aesthetics and functionality in mind. Every color choice serves a purpose, making your code not just beautiful, but more understandable and maintainable.
