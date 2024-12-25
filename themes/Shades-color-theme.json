@@ -238,7 +238,7 @@
       "name": "Block Level Variables",
       "scope": ["meta.block variable.other"],
       "settings": {
-        "foreground": "#f07178"
+        "foreground": "#89fff1"
       }
     },
     {
@@ -299,7 +299,7 @@
       "name": "Entity Types",
       "scope": ["support.type"],
       "settings": {
-        "foreground": "#fffb00"
+        "foreground": "#09e9a5"
       }
     },
     {
@@ -882,6 +882,48 @@
       ],
       "settings": {
         "foreground": "#B2CCD6"
+      }
+    },
+    {
+      "name": "TypeScript specific",
+      "scope": [
+        "variable.other.constant.ts",
+        "meta.definition.variable.ts",
+        "variable.other.readwrite.ts",
+        "variable.parameter.ts",
+        "variable.other.object.ts"
+      ],
+      "settings": {
+        "foreground": "#89DDFF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["variable.other.property.ts"],
+      "settings": {
+        "foreground": "#FFCB6B"
+      }
+    },
+    {
+      "scope": [
+        "variable.other.readwrite.alias.ts",
+        "meta.block.ts",
+        "meta.import.ts",
+        "source.ts",
+        "variable.other.constant.tsx",
+        "meta.definition.variable.tsx",
+        "meta.var-single-variable.expr.tsx",
+        "meta.var.expr.tsx",
+        "source.tsx"
+      ],
+      "settings": {
+        "foreground": "#eae704"
+      }
+    },
+    {
+      "scope": ["keyword.control.flow.ts", "meta.object-literal.key.ts"],
+      "settings": {
+        "foreground": "#6cf7c9"
       }
     }
   ],
