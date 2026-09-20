@@ -1,8 +1,8 @@
 {
   "name": "shadesai",
   "displayName": "Shades Of Stoicism",
-  "description": "Professional developer theme with AI-enhanced syntax highlighting, semantic coding colors, and eye comfort optimization. Perfect for long coding sessions and modern development.",
-  "version": "1.0.7",
+  "description": "A family of 10 color themes — 8 dark, 2 light — built on one palette system. Every syntax color is pinned to the same perceptual lightness, every token is contrast-audited, and the full modern VS Code surface is covered: chat, command center, secondary side bar, bracket pairs, inlay hints, diffs and merges.",
+  "version": "1.1.0",
   "publisher": "ddh4r4m",
   "icon": "src/marcus.png",
   "engines": {
@@ -44,18 +44,84 @@
     "github",
     "material",
     "atom",
-    "one dark"
+    "one dark",
+    "multiple themes",
+    "theme pack",
+    "oled",
+    "high contrast",
+    "accessible",
+    "wcag",
+    "colorblind",
+    "pastel",
+    "nord",
+    "gruvbox",
+    "catppuccin",
+    "tokyo night",
+    "minimal",
+    "low contrast",
+    "monochrome",
+    "italic"
   ],
   "categories": [
     "Themes",
     "Other"
   ],
+  "scripts": {
+    "build:themes": "node tools/build.js",
+    "check:themes": "node tools/build.js --check",
+    "preview": "node tools/preview.js"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Shades",
         "uiTheme": "vs-dark",
         "path": "./themes/Shades-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Nocturne",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Nocturne-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Aurora",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Aurora-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Ember",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Ember-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Mocha",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Mocha-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Abyss",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Abyss-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Verdant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Verdant-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Muted",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Shades-Muted-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Daylight",
+        "uiTheme": "vs",
+        "path": "./themes/Shades-Daylight-color-theme.json"
+      },
+      {
+        "label": "Shades of Stoicism Frost",
+        "uiTheme": "vs",
+        "path": "./themes/Shades-Frost-color-theme.json"
       }
     ]
   }

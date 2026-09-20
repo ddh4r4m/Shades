@@ -1,173 +1,159 @@
-# Shades : Smart Syntax Theme 🎨
+# Shades — a family of themes for people who read code all day
 
-Transform your coding experience with a thoughtfully crafted theme that combines aesthetic beauty with functional design. This isn't just another color scheme – it's a complete visual enhancement designed to make your code more readable, your debugging more intuitive, and your development workflow more enjoyable.
-
+Ten themes built from one palette system. Eight dark, two light. They share a single
+generator, so every one of them covers the same 650 interface colors and passes the same
+readability audit — no variant is the one that forgot to style the merge conflicts.
 
 ## Theme Overview
+
 ### Go
 ![Main Theme Preview](src/goLang.png)
 
 ### JS
 ![Main Theme Preview](src/Js.png)
 
-## Why Choose This Theme? 🌟
+## The family
 
-Our theme has been meticulously designed with both aesthetics and functionality in mind. Every color choice serves a purpose, making your code not just beautiful, but more understandable and maintainable.
+| Theme | | For |
+|---|---|---|
+| **Shades** | dark | The original. Deep indigo, cyan accents, tuned for Go. |
+| **Shades of Stoicism Nocturne** | dark | Deep indigo night. Vivid accents on a low-glare blue-violet base. |
+| **Shades of Stoicism Aurora** | dark | Arctic calm. Low-chroma steel and sage for long, quiet sessions. |
+| **Shades of Stoicism Ember** | dark | Warm retro terminal. Amber and olive on toasted charcoal, no blue glare. |
+| **Shades of Stoicism Mocha** | dark | Soft pastels on warm plum. Gentle contrast that never shouts. |
+| **Shades of Stoicism Abyss** | dark | Near-black OLED contrast. Sharp, saturated hues for bright rooms. |
+| **Shades of Stoicism Verdant** | dark | Deep forest. Botanical greens with water blues and sunlit gold. |
+| **Shades of Stoicism Muted** | dark | Low-color focus. Near-monochrome code; color reserved for strings and real problems. |
+| **Shades of Stoicism Daylight** | light | Warm paper. Ink-grade contrast without the glare of pure white. |
+| **Shades of Stoicism Frost** | light | Cool daylight. Crisp blue-grey surfaces with saturated, high-contrast code. |
 
-### Enhanced Syntax Highlighting for Go and Beyond
+Every variant is prefixed **Shades of Stoicism** so the family groups together in the
+theme picker. The original keeps its short label, `Shades`, so that existing
+`workbench.colorTheme` settings keep working.
 
-Experience unparalleled syntax highlighting that makes your code structure instantly apparent. Our theme provides special enhancements for Go programming, including:
+Pick one with `Ctrl/Cmd + K, Ctrl/Cmd + T`. Pair a light and a dark one by turning on
+`window.autoDetectColorScheme` and setting `workbench.preferredDarkColorTheme` and
+`workbench.preferredLightColorTheme` — VS Code will then follow your OS.
 
-- **Context-Aware Variables**: Different colors for primary variables and error variables, making error handling patterns immediately visible
-- **Function Visibility**: Bold function declarations with distinctive colors that separate them from regular function calls
-- **Type System Enhancement**: Clear visual distinction for types, interfaces, and structs
-- **Package Management**: Intuitive coloring for package declarations and imports
-- **Error Highlighting**: Special attention to error variables and nil values with bold and italic styles
+## What makes them different
 
-### Innovative UI Elements
+### One perceived brightness across every syntax color
 
-We've reimagined every aspect of the VS Code interface:
+HSL lightness lies: `#0000ff` and `#ffff00` are both "50%" and nowhere near equally bright.
+These themes are generated in **OKLCH**, where lightness matches what the eye reports, and
+every syntax color in a theme is pinned to the same `L` value. A line of code stops
+flickering bright-dim-bright, and your eye is pulled by *meaning* instead of by whichever
+token happens to be palest.
 
-- **Intelligent Sidebar**: 
-  - Crystal-clear file selection with distinct borders and highlights
-  - Improved contrast for better file navigation
-  - Smart hierarchy in folder structures
+Diagnostics deliberately break that rule. An error should out-shout the code around it.
 
-- **Enhanced Debugging Experience**:
-  - Vibrant, purpose-driven colors in the debug console
-  - Clear distinction between different variable types
-  - Intuitive highlighting for stack frames
-  - Carefully chosen colors for debug states
+### Audited, not eyeballed
 
-- **Refined Terminal**:
-  - Carefully selected ANSI colors for maximum readability
-  - Distinct bright and regular color variants
-  - Optimized selection and cursor visibility
+The build fails if any color that carries code drops below **4.5:1** against its
+background, if comments fall below 3:1, or if two syntax hues are indistinguishable. It
+warns when surfaces are far enough apart to read as banding, when comments are loud enough
+to compete with code, and when red and green sit at the same lightness — the one pairing a
+colorblind reader cannot resolve. Diff and merge colors carry borders as well as fills for
+exactly that reason.
 
-### Search and Navigation
+Measured body-text contrast runs 10.9:1 to 15.2:1 depending on the variant.
 
-Finding what you need has never been easier:
+### Backgrounds that don't glare
 
-- **Prominent Search Highlights**: Stand-out colors for search matches that don't strain your eyes
-- **Smart Minimap**: 
-  - Enhanced color scheme for better code overview
-  - Clear indication of modifications and selections
-  - Improved scrollbar visibility
+No pure black, no pure white. Dark variants sit in the `#151e1a`–`#232936` band; the OLED
+variant goes lower and raises chroma to compensate. Foregrounds are dimmed rather than
+white, which reduces the halation that makes bright glyphs bleed on dark backgrounds —
+particularly for the roughly one in three adults with astigmatism.
 
-### Thoughtful Color Psychology
+### The whole modern editor, not just the text
 
-Every color in our theme has been chosen with purpose:
+Most themes were written for the 2019 layout. These cover what VS Code actually looks like
+now:
 
-- **Background**: A rich, deep tone (#1E1E2E) that reduces eye strain during long coding sessions
-- **Primary Text**: Crystal-clear foreground colors optimized for extended reading
-- **Accent Colors**: Carefully selected to create visual hierarchy without overwhelming your senses
+- **Chat and inline chat** — request bubbles, slash commands, the added/removed line pills,
+  checkpoint separators, the thinking shimmer, and the inline chat input.
+- **Command Center** — the title-bar pill, including its debugging state.
+- **Bracket pair guides** — the separate `editorBracketPairGuide` family, which the
+  recommended settings below actually switch on.
+- **Inline edits and ghost text** — kept above 3:1 so AI suggestions are actually reviewable.
+- **Multi-file diff** — where agent change-reviews render.
+- **Terminal command decorations** — the pass/fail dots in the terminal gutter.
+- Plus bracket pair colors 1–6, active indent guides 1–6, inlay hints, sticky scroll, peek
+  view, merge conflicts, test coverage, comments/review, notebooks, and all 16 ANSI colors
+  derived from the theme's own syntax hues so the terminal matches the editor.
 
-## Installation 🚀
+### Syntax that means something
+
+Colors map to roles, consistently, across all ten themes:
+
+- **Bold marks declarations**, never calls — so "where is this defined" has a visual analogue.
+- **Italic marks context** — comments, parameters, `this`/`self`, builtins, type parameters.
+- **Variables are usually left uncolored.** When everything is vivid, nothing is. The
+  colored things are the ones worth finding.
+- Go, TypeScript, Python, Rust, CSS, JSON, YAML, Markdown and diff output all get specific
+  attention, and semantic highlighting is enabled so language servers can refine it further.
+
+## Installation
 
 1. Open VS Code
 2. Press `Ctrl/Cmd + P`
-3. Type `ext install developer-pro-smart-syntax`
-4. Press Enter
+3. Type `ext install ddh4r4m.shadesai`
+4. Press Enter, then pick a variant with `Ctrl/Cmd + K, Ctrl/Cmd + T`
 
-## Recommended Settings ⚙️
-
-For the optimal experience, we recommend the following VS Code settings:
+## Recommended settings
 
 ```json
 {
-    "editor.fontLigatures": true,
-    "editor.renderWhitespace": "selection",
-    "editor.renderControlCharacters": true,
-    "editor.renderLineHighlight": "all",
-    "workbench.tree.renderIndentGuides": "always"
+  "editor.fontLigatures": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.renderWhitespace": "selection",
+  "editor.renderLineHighlight": "all",
+  "editor.stickyScroll.enabled": true,
+  "workbench.tree.renderIndentGuides": "always"
 }
 ```
 
-## What's Different? 🆕
+## Building and contributing
 
-Unlike traditional themes that focus solely on syntax highlighting, our theme provides:
+Themes are **generated, not hand-edited**. Editing `themes/*.json` directly is wasted work;
+the next build overwrites it.
 
-- **Semantic Intelligence**: Colors that adapt based on how variables and functions are used
-- **Context Awareness**: Different highlighting for declaration vs. usage
-- **Error Prevention**: Visual cues that help you spot potential issues before they become problems
-- **Cognitive Load Reduction**: Carefully chosen color combinations that make code patterns more recognizable
+```
+tools/palettes.js     one object per theme: roles -> hex. The creative surface.
+tools/build-theme.js  palette -> full theme. Workbench keys and token scopes live here.
+tools/color.js        OKLCH, contrast, gamut-safe lightness, perceptual mixing.
+tools/build.js        builds all themes, audits them, syncs package.json.
+```
 
-## Feature Breakdown 📊
+```bash
+npm run build:themes   # generate + audit + sync package.json
+npm run check:themes   # audit only, no writes
+```
 
-### Go-Specific Enhancements
+To propose a new variant, add a palette to `tools/palettes.js` and run the build. If the
+audit complains, it's usually right. To change something for *every* theme — a missing
+workbench key, a token scope — edit `tools/build-theme.js` once.
 
-Our theme excels at making Go code more readable with special attention to:
+The design rules behind all of this are written up in
+`.claude/skills/color-theme-design/`, including a checklist of the VS Code color keys most
+themes miss.
 
-- Package-level declarations
-- Interface and struct definitions
-- Error handling patterns
-- Method receivers
-- Built-in functions
-- Type assertions and conversions
+## Feedback and support
 
-### Universal Improvements
+Screenshots help enormously for color issues — what looks wrong on your display and font
+may look fine on mine.
 
-Beyond Go, we've enhanced the experience for:
-
-- JSON with nested level distinction
-- Markdown with improved readability
-- Git integration with clear status indicators
-- Debug output with semantic coloring
-- Terminal with optimized ANSI colors
-
-## Accessibility 🌈
-
-We've taken extra care to ensure our theme is accessible to all developers:
-
-- **Color Contrast**: All color combinations meet WCAG 2.1 guidelines
-- **Distinct Patterns**: Important elements are distinguished by more than just color
-- **Customization Options**: Easy to modify for personal preferences
-- **Readability Focus**: Tested extensively for various forms of color vision deficiency
-
-## Community 🤝
-
-Join our growing community of developers using Shades:
-- Check out who's [starring the project](https://github.com/ddh4r4m/Shades/stargazers)
-- See how others are [using and customizing](https://github.com/ddh4r4m/Shades/network/dependents) the theme
-- Fork the project to create your own variation
-
-## Contributing 🤝
-
-Contributions are welcome! Please read our [contributing guidelines](https://github.com/ddh4r4m/Shades/blob/master/CONTRIBUTING.md) before submitting pull requests.
-
-## Feedback and Support 💬
-We appreciate detailed feedback including:
-- Screenshots of any issues
-- Steps to reproduce problems
-- Suggestions for color improvements
-- Ideas for new features or language support
-
-### GitHub
-- Report issues or suggest features: [GitHub Issues](https://github.com/ddh4r4m/Shades/issues)
+- Issues and feature requests: [GitHub Issues](https://github.com/ddh4r4m/Shades/issues)
 - Star the repository: [Shades Theme](https://github.com/ddh4r4m/Shades)
-- Submit pull requests for improvements
-
-### VS Code Marketplace
-- Leave a review and rating on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ddh4r4m.shades)
-- Share your experience to help other developers
-
-### Contact
+- Reviews: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ddh4r4m.shades)
 - Author: [ddh4r4m](https://github.com/ddh4r4m)
-- Follow for updates: [GitHub Profile](https://github.com/ddh4r4m)
 
-## License 📝
+## License
 
-MIT License - Feel free to use in personal and commercial projects.
-
-## Credits 👏
-
-Special thanks to the developer community for their valuable feedback and suggestions that helped shape this theme.
+MIT. Free for personal and commercial use.
 
 ---
 
-Start coding with enhanced clarity and reduced eye strain today. Give Developer Pro: Smart Syntax Theme a try and experience the difference thoughtful design can make to your daily coding experience.
-
-If you enjoy using Shades, consider:
-- ⭐ Starring the repository
-- 🔄 Sharing it with your developer friends
-- 📝 Writing about your experience
+If Shades works for you, consider starring the repo or leaving a review — both genuinely
+help other developers find it.

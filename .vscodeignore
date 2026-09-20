@@ -1,4 +1,8 @@
 .vscode/**
 .vscode-test/**
+.claude/**
+tools/**
 .gitignore
+.gitattributes
 vsc-extension-quickstart.md
+preview.html
