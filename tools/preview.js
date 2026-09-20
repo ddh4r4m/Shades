@@ -226,7 +226,8 @@ function windowMarkup(s) {
 
 const nav = specs.map((s) => `<a href="#${s.id}">${esc(s.label.replace(/^Shades of Stoicism /, '').replace(/^Shades$/, 'Classic'))}</a>`).join('');
 
-const html = `<title>Shades Specimen</title>
+const html = `<meta charset="utf-8">
+<title>Shades Specimen</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap">
