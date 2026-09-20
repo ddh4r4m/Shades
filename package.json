@@ -2,7 +2,7 @@
   "name": "shadesai",
   "displayName": "Shades Of Stoicism",
   "description": "A family of 10 color themes — 8 dark, 2 light — built on one palette system. Every syntax color is pinned to the same perceptual lightness, every token is contrast-audited, and the full modern VS Code surface is covered: chat, command center, secondary side bar, bracket pairs, inlay hints, diffs and merges.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "ddh4r4m",
   "icon": "src/marcus.png",
   "engines": {

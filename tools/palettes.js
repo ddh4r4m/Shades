@@ -23,6 +23,57 @@
 
 module.exports = [
   {
+    // The original. Its colors are preserved verbatim, so existing users see the
+    // theme they installed — it runs through the generator purely to pick up the
+    // ~550 workbench keys it was missing. Deliberately no uniformL: harmonizing
+    // would repitch every syntax hue and change how the theme actually looks.
+    id: 'classic',
+    label: 'Shades',
+    file: 'Shades-color-theme.json',
+    appearance: 'dark',
+    description: 'The original. Deep indigo with cyan accents, tuned for Go.',
+    bg: '#25273d',
+    bgDim: '#202234',
+    bgElevated: '#2c2e44',
+    bgOverlay: '#2d3748',
+    border: '#4a5568',
+    fg: '#e2e8f0',
+    fgMuted: '#a0aec0',
+    // Was #65737E, which measured exactly at the 3:1 floor; lifted a hair so
+    // line numbers and indent guides clear it.
+    fgSubtle: '#687681',
+    accent: '#63b3ed',
+    accent2: '#b794f4',
+    keyword: '#c792ea',
+    string: '#c3e88d',
+    func: '#82aaff',
+    type: '#ffcb6b',
+    constant: '#f78c6c',
+    variable: '#eeffff',
+    property: '#b2ccd6',
+    operator: '#89ddff',
+    tag: '#f07178',
+    parameter: '#f78c6c',
+    // The one color that changed: #546E7A measured 2.71:1, under the 3:1 floor
+    // for de-emphasized text. Same hue, lifted just past legible.
+    comment: '#5f7985',
+    error: '#ff5370',
+    warning: '#ffcb6b',
+    info: '#89ddff',
+    success: '#c3e88d',
+    // Signature chrome from the hand-written original.
+    overrides: {
+      'activityBar.background': '#242639',
+      'activityBar.foreground': '#12d8f6',
+      'titleBar.activeForeground': '#acdcff',
+      'statusBar.background': '#2d3748',
+      'statusBar.foreground': '#9dc6ff',
+      'panel.background': '#1a202c',
+      'terminal.background': '#202234',
+      'editor.findMatchBorder': '#55f6f1',
+    },
+  },
+  {
     id: 'nocturne',
     label: 'Shades of Stoicism Nocturne',
     file: 'Shades-Nocturne-color-theme.json',

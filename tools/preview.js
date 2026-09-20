@@ -13,22 +13,6 @@ const { contrast, toOklch, flatten } = require('./color');
 const ROOT = path.join(__dirname, '..');
 const out = process.argv[2] || path.join(ROOT, 'preview.html');
 
-// The original theme predates the palette system, so its roles are read back
-// out of the file it ships rather than generated.
-const CLASSIC = {
-  id: 'classic',
-  label: 'Shades',
-  file: 'Shades-color-theme.json',
-  appearance: 'dark',
-  description: 'The original, hand-tuned. Deep indigo with cyan accents, built around Go.',
-  bg: '#25273d', fg: '#E2E8F0', comment: '#546E7A',
-  keyword: '#C792EA', string: '#C3E88D', func: '#82AAFF', type: '#FFCB6B',
-  constant: '#F78C6C', variable: '#EEFFFF', property: '#B2CCD6', operator: '#89DDFF',
-  tag: '#f07178', parameter: '#F78C6C', error: '#FF5370', warning: '#FFCB6B',
-  info: '#89DDFF', success: '#C3E88D', accent: '#63B3ED', accent2: '#B794F4',
-  fgMuted: '#A0AEC0', fgSubtle: '#65737E',
-};
-
 const SYNTAX = ['keyword', 'string', 'func', 'type', 'constant', 'property', 'operator', 'tag', 'parameter', 'variable'];
 
 // Theme files are JSONC — the original hand-written one is full of comments.
@@ -59,10 +43,9 @@ function readTheme(file) {
 }
 
 function spec(rawPalette) {
-  const p = rawPalette.uniformL ? harmonize(rawPalette) : rawPalette;
+  const p = harmonize(rawPalette);
   const theme = readTheme(p.file);
   const c = theme.colors;
-  // The classic theme leaves many keys unset; fall back to its palette roles.
   const pick = (key, fallback) => c[key] || fallback;
 
   const ls = SYNTAX.map((role) => toOklch(p[role]).L);
@@ -133,7 +116,7 @@ function spec(rawPalette) {
   };
 }
 
-const specs = [spec(CLASSIC), ...palettes.map(spec)];
+const specs = palettes.map(spec);
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

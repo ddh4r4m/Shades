@@ -798,6 +798,10 @@ function buildTheme(rawPalette) {
     'commentsView.unresolvedIcon': p.warning,
   };
 
+  // A palette may pin individual keys verbatim. Used by the original theme to
+  // keep the exact chrome its users already know.
+  Object.assign(colors, p.overrides || {});
+
   const tokenColors = buildTokenColors(p, { italic, boldItalic, dark });
   const semanticTokenColors = buildSemanticTokens(p, { dark });
 

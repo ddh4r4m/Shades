@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.2.0]
+
+The original theme now goes through the same generator as the rest of the family.
+
+### Changed
+
+- **Shades** picks up the ~550 workbench keys it was missing: bracket pair colors and
+  guides, chat and inline chat, Command Center, inlay hints, sticky scroll, peek view,
+  diff and merge, git decorations, test coverage, inline edits and multi-file diff.
+  Its palette is preserved verbatim, so the editor looks like the theme you installed.
+- Two colors moved, both for legibility: comments were `#546E7A` at 2.71:1, under the 3:1
+  floor for de-emphasized text, and the line-number grey sat exactly on it. Both were
+  lifted a hair at the same hue.
+- The active tab now matches the editor background rather than sitting a shade off it.
+- Terminal ANSI colors are derived from the theme's own syntax hues, so the terminal and
+  the editor finally agree.
+
 ## [1.1.0]
 
 Shades becomes a family.
