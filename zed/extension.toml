@@ -4,4 +4,4 @@ version = "1.0.0"
 schema_version = 1
 authors = ["Dharam Dhurandhar <ddh4r4m@gmail.com>"]
 description = "Ten themes from one palette system, eight dark and two light. Every syntax colour sits at the same perceptual lightness and every token is contrast-audited at build time."
-repository = "https://github.com/ddh4r4m/shades-of-stoicism-theme"
+repository = "https://github.com/ddh4r4m/zed-shades-of-stoicism"
