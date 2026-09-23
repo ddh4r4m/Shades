@@ -1,3 +1,4 @@
 node_modules
 *.vsix
 preview.html
+.playwright-mcp/
