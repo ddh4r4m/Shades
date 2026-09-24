@@ -6,3 +6,4 @@ tools/**
 .gitattributes
 vsc-extension-quickstart.md
 preview.html
+screenshots/**

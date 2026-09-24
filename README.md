@@ -35,6 +35,64 @@ Pick one with `Ctrl/Cmd + K, Ctrl/Cmd + T`. Pair a light and a dark one by turni
 `window.autoDetectColorScheme` and setting `workbench.preferredDarkColorTheme` and
 `workbench.preferredLightColorTheme` — VS Code will then follow your OS.
 
+## The themes
+
+Shown in Zed, same file in every shot.
+
+### Nocturne <sub>dark</sub>
+
+Deep indigo night. Vivid accents on a low-glare base.
+
+![Shades of Stoicism Nocturne](screenshots/nocturne.webp)
+
+### Aurora <sub>dark</sub>
+
+Arctic calm. Low-chroma steel and sage.
+
+![Shades of Stoicism Aurora](screenshots/aurora.webp)
+
+### Ember <sub>dark</sub>
+
+Warm retro terminal. Amber and olive, no blue glare.
+
+![Shades of Stoicism Ember](screenshots/ember.webp)
+
+### Mocha <sub>dark</sub>
+
+Soft pastels on warm plum.
+
+![Shades of Stoicism Mocha](screenshots/mocha.webp)
+
+### Abyss <sub>dark</sub>
+
+Near-black OLED contrast for bright rooms.
+
+![Shades of Stoicism Abyss](screenshots/abyss.webp)
+
+### Verdant <sub>dark</sub>
+
+Deep forest greens with water blues.
+
+![Shades of Stoicism Verdant](screenshots/verdant.webp)
+
+### Muted <sub>dark</sub>
+
+Low-colour focus. Colour kept for strings and problems.
+
+![Shades of Stoicism Muted](screenshots/muted.webp)
+
+### Daylight <sub>light</sub>
+
+Warm paper, ink-grade contrast.
+
+![Shades of Stoicism Daylight](screenshots/daylight.webp)
+
+### Frost <sub>light</sub>
+
+Cool daylight, crisp blue-grey.
+
+![Shades of Stoicism Frost](screenshots/frost.webp)
+
 ## What makes them different
 
 ### One perceived brightness across every syntax color
